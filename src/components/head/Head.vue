@@ -1,7 +1,7 @@
 <template>
   <div class="box">
   <div class="left">
-    <img src="../../assets/cnode.svg" alt="">
+    <img src="../../assets/cnode.svg" alt="" @click="skip">
     <div class="demo-input-suffix el__input__text">
       <el-input
           placeholder="请输入内容"
@@ -16,7 +16,8 @@
         <div class="item" label="API" name="3">API</div>
         <div class="item" label="关于" name="4">关于</div>
         <div class="item" label="注册" name="5">注册</div>
-        <div class="item" label="登录" name="6">登录</div>
+        <div class="item" label="登录" name="6" @click="log()">登录</div>
+        <div class="item" label="退出登录" name="7" @click="exit()">退出登录</div>
     </div>
 
 
@@ -38,6 +39,16 @@
       }
     },
     methods: {
+      skip(){
+        this.$router.push("/home");  /*点击图片跳转*/
+      },
+      log(){
+        this.$router.push("/login");  /*点击图片跳转*/
+      },
+      exit(){
+        this.$store.state.username="";    /*退出登录*/
+        localStorage.removeItem("uername")
+      }
 
     },
 

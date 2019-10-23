@@ -1,4 +1,4 @@
-import axios from '_axios@0.19.0@axios/index';
+import axios from 'axios';
 import qs from 'qs';
 
 

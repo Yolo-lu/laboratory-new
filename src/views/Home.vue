@@ -56,7 +56,7 @@
 
 <script>
 // @ is an alias to /src
-// import Detail from "./detail/Detail";
+import { Loading } from 'element-ui';
 export default {
   name: "home",
   components: {
@@ -85,6 +85,9 @@ export default {
         .then(response => {
           this.now = response.data;
           console.log(response);
+          this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
+            this.loadingInstance.close();
+          });
           let nowTime = Date.now(); /*获取当前时间戳*/
           // console.log(nowTime);
           this.now.map(item => {
@@ -115,12 +118,15 @@ export default {
       this.pageNumber=val;
     },
     getDetail(data){
-      this.$router.push({name:'detail',query:{id:data.id}})
+      this.$router.push({name:'detail',query:{id:data.id}})   /*含有参数的路由跳转*/
     }
   },
   filters: {},
   mounted() {
     this.getNow();
+    this.loadingInstance=Loading.service({
+      text: "加载中..."
+    });
   }
 };
 </script>
