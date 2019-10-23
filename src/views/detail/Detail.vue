@@ -117,7 +117,7 @@ export default {
 
   mounted() {
     this.loadingInstance=Loading.service({
-      text: "加载中..."
+      text: "加载中,敬请期待..."
     });
     this.id = this.$route.query.id; /*接收路由传来的参数*/
     this.get();

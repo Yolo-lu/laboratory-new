@@ -125,7 +125,7 @@ export default {
   mounted() {
     this.getNow();
     this.loadingInstance=Loading.service({
-      text: "加载中..."
+      text: "加载中,敬请期待..."
     });
   }
 };

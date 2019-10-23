@@ -139,12 +139,13 @@ export default {
   width: 230px;
   margin: 10px;
   background: white;
-  padding-left: 10px;
+
   .title {
     background: #f6f6f6;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
+    padding-left: 10px;
   }
   .item {
     div {
@@ -154,6 +155,7 @@ export default {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      padding-left: 10px;
     }
     .photo{
       height: 55px;
