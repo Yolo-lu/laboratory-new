@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import axios from "axios";
+=======
+import axios from 'axios';
+>>>>>>> origin/master
 import qs from 'qs';
 
 

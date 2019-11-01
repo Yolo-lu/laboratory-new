@@ -10,7 +10,11 @@ module.exports = {
       "/api": {
         ws: false,
         // target就是请求接口的根路径
+<<<<<<< HEAD
         target: "https://www.shiyanlou.com/api",
+=======
+        target: " https://cnodejs.org/api/v1",
+>>>>>>> origin/master
         changeOrigin: true,
         pathRewrite: {
           "^/api": ""
