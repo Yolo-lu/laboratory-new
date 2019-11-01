@@ -1,8 +1,9 @@
-import axios from '_axios@0.19.0@axios/index';
+import axios from "axios";
 import qs from 'qs';
 
 
 export default {
+  /*就收数据*/
   req(...params){
     if (params.length===1){
       return axios.get(params[0])

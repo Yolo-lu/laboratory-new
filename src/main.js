@@ -9,7 +9,12 @@ import http from "./http";
 import axios from "axios";
 import dayjs from "dayjs";
 import lodash from "lodash";
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+// require styles
+import 'swiper/dist/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 Vue.prototype.$dayjs=dayjs;
 Vue.prototype.$lodash=lodash;

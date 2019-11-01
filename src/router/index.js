@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Structrue from "../views/structrue/Structrue";   /*引入公共结构*/
+// import Home from "../views/Home.vue";
+// import Structrue from "../views/structrue/Structrue";   /*引入公共结构*/
 Vue.use(VueRouter);
 
 
@@ -13,15 +13,20 @@ const routes = [
   },
   {
     path: "/home",
-    component: Structrue,
-    children: [
-      {
-        path: "",
-        name: "home",
-        component: Home
-      }
-    ]
-  },
+    name: "home",
+    component: () => import("../views/Home")
+  }
+  // {
+  //   path: "/home",
+  //   component: Structrue,
+  //   children: [
+  //     {
+  //       path: "",
+  //       name: "home",
+  //       component: Home
+  //     }
+  //   ]
+  // },
   // {
   //   path: "/detail",
   //   name: "detail",

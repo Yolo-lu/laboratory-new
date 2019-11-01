@@ -1,4 +1,5 @@
 module.exports = {
+  lintOnSave: false,
   devServer: {
     // 配置端口号
     port: 8080,
@@ -9,7 +10,7 @@ module.exports = {
       "/api": {
         ws: false,
         // target就是请求接口的根路径
-        target: "https://api-m.mtime.cn",
+        target: "https://www.shiyanlou.com/api",
         changeOrigin: true,
         pathRewrite: {
           "^/api": ""
